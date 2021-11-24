@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>本周新片</title>
+    <link rel='stylesheet' href='/static/css/index.css'>
+</head>
+
+<body>
+    {% include 'menu.html' %}
+    <div class='info'>
+        {% for p in comingmovie_list %}
+        <div class='infoarea'>
+            <ul>
+                <li>
+                    <div style='font-weight: 1000'>{{p.title}}</div>
+                    <div><a href="{{p.url}}" target="_blank"><img src="{{p.img}}" height="225px">
+                            <span class='content'>簡介:{{p.content}}</span>
+                    </a></div>
+                </li>
+                <span class='content'><br>{{p.date}}</br></sapn>
+            </ul>
+            
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class='pagination'>
+        <span class='page_link'>
+            <!--假如有前一頁-->
+            {% if comingmovie_list.has_previous %}
+            <a href='?page={{comingmovie_list.previous_page_number}}'>上一頁</a>
+            {% endif %}  
+            
+            <span class='current'>
+                <!--頁數:當前頁數 / 最後頁數-->
+                頁數:{{comingmovie_list.number}} / {{comingmovie_list.paginator.num_pages}}
+            </span>
+            <!--假如有下一頁-->
+            {% if comingmovie_list.has_next %}
+                <a href='?page={{comingmovie_list.next_page_number}}'>下一頁</a>
+            {% endif %}
+        </span>        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+body, html {
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+    height: auto;
+    min-width: 1200px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+	opacity: 1!important;
+}
+
+div {
+	background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+.container {
+    margin-top: 20px;
+    padding-bottom: 50px;
+	overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1230px;
+}
+
+.content_l {
+    float: left;
+    overflow: hidden;
+    width: 883px;
+}
+
+.l_box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.movie_tab {
+    border-bottom: 1px solid #d2d2d2;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.rank_list {
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    font-size: 13px;
+    width: 100%;
+	display: table;
+}
+
+.rank_list .tr {
+    width: 100%;
+}
+
+.rank_list .td {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    width: 5%;
+	float: left;
+}
+
+.td1 {
+    vertical-align: top;
+    width: 48%;
+	float: left;
+}
+
+.td2 {
+    width: 15%;
+	text-align: center;
+    width: 20px;
+	float: left;
+}
+
+.tr top{
+    background: #ececec;
+	width: 100%;
+	display: table-row;
+	min-height: 150px;
+    background-color: #123456;	
+}
+
+.td top{
+	font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    width: 5%;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 15px 0;
+    vertical-align: middle;
+	display: table-cell;
+	float: left;
+}

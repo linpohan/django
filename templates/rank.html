@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>排行榜</title>
+    <link rel='stylesheet' href='/static/css/index.css'>
+    <link rel='stylesheet' href='/static/css/file.css'>
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div><span class="glow">台北票房榜</span></div>
+    {% for row in rank_list %} 
+    <div id='maincontainer'>
+        <div class='maincontent ga_ranking '>
+            <div id='container' class='content _c'>                        
+                <div id='content_l'>    
+                    <div class='l_box'>
+                        <div class='rank_list table rankstyle1'>
+                            <div class='tr top'>
+                                <div class='td'>排名</div>
+                                <div class='td'>片名</div>
+                                <div class='td'>網友滿意度</div>
+                            </div>    
+                               
+                            <div class='tr'>       
+                                <div class='td'>{{row.num}}</div>                        
+                                <div class='td'><a href="{{p.url}}" target="_blank">
+                                    <div class='rank_txt'>{{row.title}}</a></div>
+                                </div>
+                                
+                                <div class='td starwithnum'>
+                                    <h6 class='count'>{{row.star}}</h6>
+                                </div>   
+                            </div>                             
+                        </div>                    
+                    </div>                                        
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

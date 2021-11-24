@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>戲院總覽</title>
+    <link rel='stylesheet' href='/static/css/index.css'>
+    <link rel='stylesheet' href='/static/css/file.css'>
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div id='maincontainer'>
+        <header>
+            <div id='kv'>
+                <div class='content'>
+                    <div id='y_hous_serch' class='_c'>
+                        <div id='y_serch_l'>
+                            <!--表單 action未填即為送給自己-->
+                            <form action='' methon='get'>
+                                <input id='serchinput' type='text' name='adds'><p></p>
+                                <button class='serch_movie gabtn'>縣市查詢</button>
+                                <input type='hidden' id='fr' value='查詢'>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% for row in address_list %} 
+        <div class='maincontent  '>
+            <div id='container' class='content _c'>                        
+                <div id='content_l'>    
+                    <div class='l_box _c'>
+                        <div class='l_box_inner'>
+                            <div class='theater_content'>
+                                <ul>
+                                    <li class='tab'>
+                                        <div>戲院</div>
+                                        <div>地址</div>
+                                        <div>電話</div>
+                                    </li>    
+                                                           
+                                    <li>       
+                                        <div class='name'><a href="{{p.url}}" target="_blank">{{row.title}}</a></div>                        
+                                        <div class='adds'>{{row.add}}</div>                                       
+                                        <div class='tel'>{{row.tel}}</div>
+                                    </li> 
+                                </ul>  
+                            </div>
+                        </div>                    
+                    </div>                                        
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div class='pagination'>
+        <span class='page_link'>
+            <!--假如有前一頁-->
+            {% if address_list.has_previous %}
+            <a href='?page={{address_list.previous_page_number}}&adds={{add}}'>上一頁</a>
+            {% endif %}  
+            
+            <span class='current'>
+                <!--頁數:當前頁數 / 最後頁數-->
+                頁數:{{address_list.number}} / {{address_list.paginator.num_pages}}
+            </span>
+            <!--假如有下一頁-->
+            {% if address_list.has_next %}
+                <a href='?page={{address_list.next_page_number}}&adds={{add}}'>下一頁</a>
+            {% endif %}
+        </span>        
+    </div>
+
+</body>
+</html>

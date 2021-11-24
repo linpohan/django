@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.info{	
+	clear: both;
+	margin: 0px auto 50px;
+}*/
+
+/*.info .infoarea{
+  float:left;
+  padding: 10px;
+  width: 23%;
+  height: 500px;
+
+}*/
+
+.info .infoarea{
+	float: left;
+	overflow: hidden;
+	width: 883px;
+}
+
+.info .infoarea img{
+	border-right: 1pxsolid #fff;
+	box-sizing: border-box;
+	display: table-cell;
+	padding: 10px 11px 10px 10px;
+	position: relative;
+	vertical-align: top;
+	width: 40%;
+	height: 300px;
+	left: 25%;
+}
+
+.info >p{
+	font-size: 28px;
+	padding-top: 20px;
+	font-weight: bold;
+}
+
+/*li{
+	list-style-type:none;
+}		*/
+
+.infoarea li{
+	background: #ececec;
+	border: 1pxsolid #d2d2d2;
+	box-sizing: border-box;
+	display: table;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;	
+}
+
+.info .infoarea li{
+	box-sizing: border-box;
+	display: table-cell;
+	font-size: 18px;
+	line-height: 1.5;
+	padding: 20px 10 80px;
+	position: relative;
+	width: 77%;
+}
+
+/*.info .infoarea ul{
+	background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}*/
+
+ul{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+	
+.pagination{
+	clear:both;
+	text-align: center;
+	padding-top: 100px;
+}		
+		
+
+
+
+
+#id_footer {
+    
+
+	
+    /* 設定footer的高度 */	
+    
+    height: 40px;
+    box-sizing: border-box;
+	/* 設定footer絕對位置在底部 */
+    /* position: absolute;*/
+    bottom: 0;
+	/* 展開footer寬度 */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #123456;
+    color: white;
+	padding-top: 10px;	
+
+	
+}
+
+.banner{
+    min-height: 150px;
+    background-color: #123456;
+}
+
+.search{
+    height: 150px;
+}
+
+html,body{
+    margin: 0;
+    height: 100%;
+}
+
+#menu{
+    width: 100%;
+    height: 100px;
+    background-color: #223344;
+    color: white;
+
+}
+
+
+#menu li{
+    list-style: none;
+    /* 在同一線上 */
+    display: inline;
+    font-size: 20px;
+}
+
+.banner li{
+    list-style: none;
+    display: inline;
+    font-size: 25px;
+    float:left;
+    padding-left: 120px;
+}
+
+.banner img{
+    float:left;
+}
+
+.banner ul{
+    white-space: nowrap;
+    line-height: 150px;
+}
+
+#menu a{
+    color: white;
+    /* 去底線 */
+    text-decoration: none;
+}
+
+.banner a{
+    color: white;
+    /* 去底線 */
+    text-decoration: none;
+
+}
+
+#content{
+    width: 100%;
+    min-height: 450px;
+
+}
+
+#footer{
+    /* 設定footer的高度 */	
+
+    height: 40px;
+    box-sizing: border-box;
+	/* 設定footer絕對位置在底部 */
+    /* position: absolute;*/
+    bottom: 0;
+	/* 展開footer寬度 */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /*margin-top: 30px;*/
+    background-color: #123456;
+    color: white;
+	padding-top: 10px;	
+
+}
+
+.indexinfo{	
+	clear: both;
+	margin: 0px auto 50px;
+	padding-left: 20%;
+}
+
+.indexinfo .infoarea{
+  float:left;
+  padding: 10px;
+  width: 23%;
+  height: 500px;
+
+}
+
+.indexinfo .infoarea img{
+  width: 100%;
+}
+
+/*.infoarea li{
+    list-style: none;
+    font-size: 20px;
+}*/
+
+#wrapper{
+    min-height: 90%;
+    margin-bottom: -40px;
+}
+
+
+.content {
+	background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+}
+
+li a{
+	color: #8428e2;
+	text-decoration: none;
+}
+
